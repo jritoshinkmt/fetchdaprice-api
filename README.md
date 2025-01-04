@@ -2,25 +2,43 @@
 _A simple REST API to fetch cryptocurrency prices using CoinMarketCap._
 
 ## Features
-- Get the current price of any cryptocurrency.
-- Support for multiple currencies (e.g., USD, EUR, JPY).
-- Simple to use with `GET` endpoints.  
+- Fetch current cryptocurrency prices in real-time.
+- Support for multiple fiat currencies (e.g., USD, EUR, JPY).
+- Easy-to-use `GET` endpoints.
+- Built with **Express.js** and **Axios** for efficiency. 
 
 ## Endpoints
-### Get Price  
-**GET `/price/{coin}`**  
-- **Path Parameter:** `coin` (symbol of cryptocurrency, e.g., `btc`, `eth`).  
-- **Query Parameter (optional):** `currency` (fiat currency, default: `usd`).  
 
-### Example Request  
-`GET /price/btc?currency=eur`  
+### Get Price
+**GET `/price/{coin}`**
+- **Path Parameter**:  
+  `coin` - symbol of the cryptocurrency (e.g., `btc`, `eth`).
+- **Query Parameter (optional)**:  
+  `currency` - fiat currency for conversion (default: `usd`).
 
-### Example Response  
-```json
+#### Example Request (default;USD) & with Query Parameter
+```plaintext
+GET /price/btc
+```
+
+```
+GET /price/btc?currency=jpy
+```
+
+#### Example Response (default:USD) & with Query Parameter:
+```
 {
   "coin": "btc",
-  "currency": "eur",
+  "currency": "usd",
   "price": 123456789
+}
+```
+
+```
+{
+  "coin": "btc",
+  "currency": "jpy",
+  "price": 987654321
 }
 ```
 
@@ -33,5 +51,4 @@ _A simple REST API to fetch cryptocurrency prices using CoinMarketCap._
 --- 
 
 > [!NOTE]
-> •	Built using Express.js and Axios.  
-> •	Requires CoinMarketCap API key to fetch data.
+> **Requires CoinMarketCap API key to fetch data.**
