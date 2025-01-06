@@ -43,10 +43,11 @@ GET /price/btc?currency=jpy
 ```
 
 ## Run Locally
-1.	Clone the repository.
-2.	Run npm install.
-3.	Add your CoinMarketCap API key to .env file (X-CMC_PRO_API_KEY).
-4.	Run the server using npm start.
+1.	Clone the repository
+2.	Run `npm install`
+3.	Add your CoinMarketCap API key to .env file:  
+`X_CMC_PRO_API_KEY=your_actual_api_key`
+5.	Start the server `npm start`
 
 --- 
 
