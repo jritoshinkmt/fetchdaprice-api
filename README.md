@@ -16,7 +16,7 @@ _A simple REST API to fetch cryptocurrency prices using CoinMarketCap._
 - **Query Parameter (optional)**:  
   `currency` - fiat currency for conversion (default: `usd`).
 
-#### Example Request (default;USD) & with Query Parameter
+#### Example Request (default:USD) & with Query Parameter
 ```plaintext
 GET /price/btc
 ```
